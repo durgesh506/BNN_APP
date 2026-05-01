@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: sans-serif;
+}
+
+.content {
+  padding: 20px;
+  padding-bottom: 70px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
