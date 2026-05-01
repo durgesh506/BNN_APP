@@ -159,7 +159,7 @@ export default function Login() {
 
           <button
             className="login-btn"
-            onClick={() => navigate("/home")}
+            onClick={() => navigate("/signup")}
           >
             Login
           </button>
