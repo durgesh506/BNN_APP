@@ -1,31 +1,46 @@
+import "../styles.css"; 
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Login() {
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
 
   return (
-    <div style={{
-      height: "100vh",
-      background: "#000",
-      color: "#fff",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center"
-    }}>
-      
-      <h2>Login</h2>
+    <div className="login">
 
-      <input placeholder="Email" style={{margin: "10px", padding: "10px"}} />
-      <input placeholder="Password" type="password" style={{margin: "10px", padding: "10px"}} />
+      {/* Back Arrow */}
+      <div className="back" onClick={() => navigate("/")}>←</div>
 
-      <button 
-        onClick={() => navigate("/home")}
-        style={{padding: "10px 20px"}}
-      >
-        Login
-      </button>
+      {/* Logo */}
+      <img src="/bnn_logo.png" className="logo" />
 
+      {/* Form */}
+      <div className="form">
+
+        <label>Email / Username</label>
+        <input placeholder="Enter your credentials" />
+
+        <label>Password</label>
+        <div className="password-box">
+          <input 
+            type={show ? "text" : "password"} 
+            placeholder="********" 
+          />
+          <span onClick={() => setShow(!show)}>👁</span>
+        </div>
+
+        <div className="forgot">Forgot Password?</div>
+
+        <button className="login-btn" onClick={() => navigate("/home")}>
+          Login
+        </button>
+
+        <p className="signup-text">
+          Don’t have an account? <span onClick={() => navigate("/signup")}>Sign Up</span>
+        </p>
+
+      </div>
     </div>
   );
 }
