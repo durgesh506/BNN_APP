@@ -29,7 +29,7 @@ body {
 
 .splash {
   height: 100vh;
-  background: #031414; /* dark greenish black */
+  background: #000000; /* dark greenish black */
   display: flex;
   flex-direction: column;
   justify-content: center;
