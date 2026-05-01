@@ -26,3 +26,32 @@ body {
   color: white;
   font-size: 20px;
 }
+
+.splash {
+  height: 100vh;
+  background: #031414; /* dark greenish black */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.splash h1 {
+  color: #FFD700;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* Subtitle */
+.splash p {
+  color: #aaa;
+  font-size: 14px;
+}
